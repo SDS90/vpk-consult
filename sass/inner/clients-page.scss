@@ -1,0 +1,191 @@
+//Клиенты
+
+.clients-page{
+
+	padding-bottom: 180px;
+
+	.main-column{
+		width: 752px;
+	}
+
+	.aside-column{
+		width: 358px;
+		padding-left: 50px;
+	}
+
+	.client-block{
+		width: 100%;
+		padding: 35px 37px 20px 37px;
+		background-color: #fff;
+		border: 1px solid #ececec;
+		position: relative;
+		margin-bottom: 7px;
+
+		.quotes{
+			position: absolute;
+			top: 40px;
+			width: 15px; height: 17px;
+			background-image: url(../img/icons/quotes.png);
+			background-repeat: no-repeat;
+			&.left-quotes{
+				background-position: 0px 0px;
+				left: 13px;
+			}
+			&.right-quotes{
+				background-position: -16px 0px;
+				right: 13px;
+			}
+		}
+
+		.textblock{
+			line-height: 15px;
+			p{
+				margin-bottom: 20px;
+			}
+		}
+
+		//Стандартный отзыв: текст + картинка
+		&.usually-block,
+		&.opened-block{
+			.client-image,
+			.client-review{
+				display: inline-block;
+				vertical-align: top;
+			}
+			.client-image{
+				width: 195px;
+				float: left;
+				border: 2px solid #fff;
+				box-shadow: 0px 2px 2px #999;
+			}
+
+			.client-review{
+				padding-top: 4px;
+				width: 460px;
+				float: right;
+			}
+		}
+		
+		//Только текст, без картинки
+		&.full-text-block{
+			.client-review{
+				width: 100%;
+				padding: 0px 15px;
+			}
+		}
+
+		//Специальный блок - с открытием разворотом
+		&.opened-block{
+			z-index: 50;
+			.more-link-wrap{
+				text-align: center;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 150px;
+				background-image: url(../img/icons/gradient.png);
+				background-size: 100% 100%;
+				.more-link{
+					display: inline-block;
+					position: absolute;
+					text-decoration: none;
+					bottom: 13px;
+					left: 0px; right: 0px;
+				}
+			}
+			&.min-height{
+				height: 250px;
+				overflow: hidden;
+			}
+		}
+
+		.client-name{
+			font-weight: bold;
+			font-size: 14px;
+			color: $textColor;
+			text-transform: uppercase;
+			margin-bottom: 25px;
+		}
+	}
+
+	//Таблица партнёров
+	.aside-column{
+		.partners-table{
+			display: table;
+			width: 100%;
+			margin-bottom: 30px;
+			.partners-row{
+				display: table-row;
+			}
+			a{
+				display: table-cell;
+				vertical-align: middle;
+				width: 50%;
+				height: 115px;
+				padding: 15px;
+				img{
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+		}
+		.aside-text{
+			padding-left: 15px;
+			font-size: 13px;
+			color: $textColor;
+			line-height: 18px;
+			margin-bottom: 25px;
+		}
+	}
+}
+
+
+//Адаптивная часть
+
+
+@media only screen and (max-width: 1150px) {
+	.clients-page{
+
+		.main-column{
+			width: 700px;
+		}
+
+		.aside-column{
+			width: 305px;
+			padding-left: 20px;
+			 .partners-table a{
+				height: 115px;
+				padding: 5px;
+			 }
+		}
+		.client-block.usually-block .client-image, 
+		.client-block.opened-block .client-image{
+			width: 26%;
+		}
+		.client-block.usually-block .client-review, 
+		.client-block.opened-block .client-review{
+			width: 68%;
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+
+	.clients-page{
+		.aside-column{
+			display: none !important;
+		}
+		.main-column,
+		.client-block.usually-block .client-review, 
+		.client-block.opened-block .client-review{
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.client-block.usually-block .client-image, 
+		.client-block.opened-block .client-image{
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,357 @@
+//Стили для шапки сайта
+
+.header-wrapper{
+	width: 100%;
+	min-width: $pageWidth;
+	background-color: transparent;
+	border-top: 5px solid #4fadcc;
+
+	position: absolute;
+	top: 0px;
+	z-index: 90;
+}
+
+header{
+	width: $pageWidth;
+	margin: 0px auto;
+	padding: 22px $pagePadding 0px $pagePadding;
+	position: relative;
+
+	.logo, .header-nav-block,
+	.logo-wrapper{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.logo-wrapper{
+		float: left;
+		margin-top: 19px;
+	}
+
+	.logo{
+		//float: left;
+		//margin-top: 19px;
+		width: 209px;
+		height: 42px;
+		background-image: url(../img/logo.png);
+		background-position: 0px 0px;
+		background-repeat: no-repeat;
+		&:hover{
+			background-position: 0px -43px;
+		}
+	}
+
+	.open-menu-button{
+		display: none;
+		width: 40px; height: 40px;
+		background-image: url(../img/icons/menu-icon.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		margin-left: 15px;
+	}
+
+	.header-nav-block{
+		float: right;
+		.buttons,
+		.contacts-wrapper{
+			display: inline-block;
+			vertical-align: top;
+		}
+		.buttons-block{
+			float: left;
+		}
+		.contacts-wrapper{
+			float: right;
+			margin-left: 10px;
+			font-size: 14px;
+			line-height: 30px;
+			font-weight: bold;
+			.contact-data{
+				color: $textColor;
+				display: inline-block;
+				vertical-align: top;
+				margin-left: 20px;
+			}
+		}
+		.button{
+			display: inline-block;
+			vertical-align: top;
+			font-weight: bold;
+			color: #fff;
+			font-size: 12px;
+			line-height: 30px;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 0px 17px;
+			margin-left: 5px;
+			&:first-child{
+				margin-left: 0px;
+			}
+			&.jur-button{
+				background-color: #4fadcc;
+				&:hover{
+					background-color: #80bcd1;
+				}
+			}
+			&.fiz-button{
+				background-color: #9979CF;
+				&:hover{
+					background-color: #b49edb;
+				}
+			}
+		}
+		
+	}
+	
+	.mobile-nav{
+		display: none;
+	}
+	.nav{
+		display: block;
+		font-size: 0px;
+		letter-spacing: -1px;
+		white-space: nowrap;
+		margin-top: 13px;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 29px;
+			font-size: 16px;
+			font-weight: bold;
+			letter-spacing: normal;
+			text-transform: uppercase;
+			&.closed{
+				display: none;
+			}
+			&:first-child{
+				margin-left: 0px;
+			}
+			&.active a,
+			a:hover{
+				border-color: #4fadcc;
+				&:after{
+					content: '';
+					position: absolute;
+					z-index: 1001;
+					left: 50%;
+					margin-left: -11px;
+					top: 100%;
+					border: 10px solid transparent;
+					border-top: 6px solid #4fadcc;
+				}
+			}
+			&.active a{
+				color: #808080
+			}
+		}
+		a{
+			display: inline-block;
+			vertical-align: top;
+			color: $textColor;
+			text-decoration: none;
+			padding-bottom: 6px;
+			border-bottom: 2px solid transparent;
+			position: relative;
+		}
+		
+	}
+
+}
+
+//Адаптивная часть
+
+
+@media only screen and (max-width: 1150px) {
+	.header-wrapper{
+		width: 100%;
+    	min-width: 0px;
+	}
+	header{
+		width: 100%;
+    	min-width: 0px;
+	}
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1150px) {
+	header{
+    	.nav{
+    		margin-top: 15px;
+    	}
+    	.nav li{
+			font-size: 14px;
+			margin-left: 18px;
+    	}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.header-wrapper{
+		width: 100%;
+    	min-width: 0px;
+    	border-top: none;
+	}
+	header{
+		position: relative;
+		padding: 0px 0px 15px 0px;
+
+		.header-nav-block,
+		.logo-wrapper{
+			display: block;
+			float: none;
+		}
+		.logo-wrapper{
+			border-top: 5px solid #4fadcc;
+			padding: 10px 0px;
+			margin: 0px auto;
+			background-color: #fff;
+		}
+
+		//Фиксируем шапку при прокрутке
+		&.fixed-header{
+			padding-top: 67px;
+			.logo-wrapper{
+				width: 100%;
+				position: fixed;
+				top: 0px;
+				z-index: 10;
+				box-shadow: 0px 3px 3px #d0d0d0;
+			}
+			.nav{
+				box-shadow: none;
+			}
+			.mobile-nav{
+				position: relative;
+			}
+		}
+
+
+		.logo{
+			display: inline-block;
+			vertical-align: top;
+			float: left;
+			margin-left: 10px;
+		}
+		.open-menu-button{
+			display: inline-block;
+			vertical-align: top;
+			float: right;
+			margin-right: 10px;
+		}
+		.header-nav-block{
+			margin: 0px auto;	
+			padding-left: 10px;
+			padding-right: 10px;		
+			text-align: center;
+			.buttons-block,
+			.contacts-wrapper{
+				display: block;
+				float: none;
+			}
+			.contacts-wrapper{
+				margin-left: 0px;
+				margin-bottom: 10px;
+				font-size: 17px;
+				line-height: 40px;
+				span,a{
+					&:first-child{
+						margin-left: 0px;
+					}
+				}
+			}
+
+			.button{
+				font-size: 14px;
+				line-height: 40px;
+				padding: 0px 24px;
+				margin-left: 15px;
+			}
+
+		}
+
+		.mobile-nav{
+			display: block;
+			width: 100%;
+			position: absolute;
+			text-align: center;
+			z-index: 160;
+			.closed{
+				display: none;
+				position: absolute;
+				z-index: 150;
+				width: 16px;
+				height: 16px;
+				margin: 0px;
+				background-image: url(../img/icons/closed-form.png);
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+				cursor: pointer;
+				top: 10px; right: 10px;
+				&:hover{
+					background-position: -18px 0px;
+				}
+			}
+			.nav{
+				display: none;
+			}
+		}
+		.standart-nav{
+			display: none;
+		}
+		.nav{
+			//position: absolute;
+			width: 100%;
+			z-index: 140;
+			background-color: #fff;
+			padding: 10px;
+			margin-top: 0px;
+			box-shadow: 0px 3px 3px #d0d0d0;
+			text-align: left;
+			li{
+				display: block;
+				margin-left: 0px;
+				font-size: 22px;
+				margin: 10px 0px;
+				&:first-child{
+					margin-left: 0px;
+				}
+				&.active a,
+				a:hover{
+					color: #808080;
+					&:after{
+						display: none;
+					}
+				}
+				&.active a{
+					color: #808080;
+				}
+				a{
+					//display: block;
+					border: none;
+					padding: 5px 0px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	header{
+		.header-nav-block{
+			.buttons-block{
+				text-align: center;
+			}
+			.button,
+			.button:first-child{
+				display: block;
+				margin: 0px auto;
+				max-width: 400px;
+				margin-bottom: 10px;
+			}
+
+			.open-menu-button{
+				//display: block;
+				//margin: 0px auto;
+			}
+		}
+	}
+}

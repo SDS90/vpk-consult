@@ -1,0 +1,17 @@
+//Все стили
+
+@import 'reset';
+@import 'base';
+
+@import 'all/header'; //Шапка сайта
+@import 'all/footer'; //Подвальчик
+
+@import 'main/main'; //Главный блок
+
+@import 'all/inner-all'; //Внутренние - общие стили
+
+@import 'inner/clients-page'; //Клиенты
+@import 'inner/contacts-page'; //Контакты
+@import 'inner/achievements-page'; //Достижения
+@import 'inner/command-page'; //Команда
+@import 'inner/detail-page'; //Детальная

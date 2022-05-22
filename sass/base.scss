@@ -1,0 +1,260 @@
+//Variables
+
+
+$pageWidth: 1130px; //Ширина страницы
+$pagePadding: 10px; //Отступы по сторонам
+
+$bodyBG: #fff;
+$selectColor: #a3c626;
+$lightText: #fefefe;
+$textColor: #282828;
+$linkColor: #4fadcc;
+
+//Общие элементы (кроме reset)
+
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../fonts/bebas_neue_regular-webfont.eot');
+    src: url('../fonts/bebas_neue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebas_neue_regular-webfont.ttf') format('truetype'),
+         url('../fonts/bebas_neue_regular-webfont.svg#bebas_neue_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	background-color: $bodyBG;
+	height: 100%;
+	font-family: 'PT Sans', sans-serif;
+	&.hidden{
+		overflow-y: hidden;
+	}
+	 /*font-size: 0px;Ставим на фон - для использования inline-блоков*/
+}
+b,strong{
+	font-weight: bold;
+}
+.font_bolder{
+	font-weight: 600;
+}
+i,em{
+	font-style: italic;
+}
+html * {
+	max-height:1000000px;
+}
+.clearfix{
+	clear: both;
+}
+.clear:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.fullpage{
+	position: relative;
+}
+a{
+	color: $linkColor;
+	&:hover{
+		color: #808080;
+		text-decoration: none;
+	}
+}
+
+.text84{
+	color: #848484;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+input::-moz-placeholder, textarea::-moz-placeholder,
+input::placeholder, textarea::placeholder {
+	font-family: 'PT Sans', sans-serif;
+  	color: $linkColor;
+	font-size: 18px;
+}
+
+.ui-loader{
+	display: none !important;
+}
+
+//Стили для текста
+@mixin textStyles{
+	p, ul,ol{
+		//margin-bottom: 25px;
+	}
+	p{
+		margin-bottom: 25px;
+	}
+	ul, ol{
+		padding-left: 17px;
+	}
+	ul>li{
+		list-style-type: disc;
+	}
+	ol>li{
+		list-style-type: decimal;
+	}
+}
+
+.textblock{
+	font-size: 14px;
+	@include textStyles;
+}
+
+.ui-btn{
+	font-size: 0px;
+	color: transparent;
+}
+
+//Переключатель физически/юридических
+.check-type-button{
+	position: fixed;
+	top: 50%;
+	z-index: 90;
+	//right: 0px;
+	margin-top: -131px;
+	min-width: 200px;
+	//width: 46px;
+	//height: 263px;
+	//background-image: url(../img/icons/recall-text.png);
+	//background-position: center center;
+	//background-repeat: no-repeat;
+
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+
+	font-size: 15px;
+	line-height: 46px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	text-align: center;
+
+
+	cursor: pointer;
+	background-color: #af1993;
+	padding: 0px 17px;
+	
+	&:hover{
+		color: #fff;
+	}
+
+	&.open-fiz{
+		background-color: #9979CF;
+		border-radius: 0px 0px 2px 2px;
+		margin-right: -77px;
+		right: 0px;
+
+		&:hover{
+			background-color: #b49edb;
+		}
+	}
+
+	&.open-jur{
+		background-color: #4fadcc;
+		border-radius: 2px 2px 0px 0px;
+		margin-left: -78px;
+		left: 0px;
+
+		&:hover{
+			background-color: #80bcd1;
+		}
+	}
+}
+
+	.recall-form{
+		display: none !important;
+		position: fixed;
+		top: 50%; left: 50%;
+		margin-left: -161px;
+		margin-top: -100px;
+		width: 322px;
+		z-index: 1000;
+		background-color: #FFF;
+		border: 1px solid #dcdcdc;
+		padding: 26px 29px;
+		box-shadow: 2px 5px 5px #999;
+		input::-webkit-input-placeholder {
+			color: #af1993;
+		}
+		input:-moz-placeholder {
+			color: #af1993;
+		}
+		.closed{
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			background-image: url(../img/icons/closed-form.png);
+			background-repeat: no-repeat;
+			background-position: 0px 0px;
+			cursor: pointer;
+			top: 7px; right: 7px;
+			&:hover{
+				background-position: -18px 0px;
+			}
+		}
+		.textfield{
+			display: block;
+			width: 100%;
+			height: 33px;
+			background-color: #e8e8e8;
+			color: #343434;
+			font-size: 18px;
+			border: none;
+			margin-bottom: 20px;
+			padding: 0px 10px;
+			outline: none;
+		}
+		.submit-btn{
+			display: block;
+			width: 100%;
+			cursor: pointer;
+			background-color: #af1993;
+			height: 33px;
+			border: none; outline: none;
+			border-radius: 2px;
+			font-size: 14px;
+			color: #fff;
+			text-transform: uppercase;
+			&:hover{
+				background-color: #aeaeae;
+			}
+		}
+	}
+
+	.open-recall-form{
+		display: none !important;
+	}
+
+@media only screen and (min-width: 1001px) and (max-width: 1150px) {
+	.open-recall-form{
+		margin-top: -125px;
+		width: 30px;
+		height: 250px;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.open-recall-form,
+	.check-type-button{
+		display: none;
+	}
+}

@@ -1,0 +1,526 @@
+//Детальная страница
+
+.detail-page{
+	padding-top: 162px;
+	padding-bottom: 30px;
+
+	//Подзаголовки на странице услуг
+	&.service-page{
+		.page-header.serif{
+			margin-bottom: 30px;
+		}
+	}
+
+	.mobile-link-list{
+		display: none;
+	}
+
+	//Стили не для колонок (страница Услуги)
+	.pdf-link-wrapper{
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 40px;
+	}
+	.pdf-link{
+		display: table;
+		margin-bottom: 20px;
+		text-decoration: none;
+		.icon{
+			display: table-cell;
+			vertical-align: middle;
+			width: 34px;
+			height: 44px;
+			background-image: url(../img/icons/pdf.png);
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		.file-name{
+			display: table-cell;
+			vertical-align: middle;
+			width: 190px;
+			font-size: 18px;
+			font-weight: bold;
+			padding-left: 15px;
+			color: #1c1c1c;
+			text-align: left;
+
+		}
+	}
+
+	//Обычный подзаголовок
+	.detail-header{
+		font-size: 16px !important;
+		font-weight: bold;
+		color: #343434;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	//Список услуг
+	.services-list{
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 0px;
+		margin-right: 17px;
+		li{
+			list-style-type: none;
+			font-size: 14px;
+			line-height: 20px;
+			color: #6b6b6b;
+			&:before {
+			    content: "- "; 
+			 }
+		}
+	}
+
+	//Пакеты услуг
+	.service-complect-wrapper{
+		display: inline-block;
+		vertical-align: top;
+		width: 320px;
+		height: 335px;
+		background-image: url(../img/bg/services.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-right: 30px;
+		.service-complect{
+			display: table;
+			width: 100%;
+			height: 335px;
+			color: #1c1c1c;
+			>div{
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				width: 100%;
+				height: 335px;
+				padding-bottom: 30px;
+			}
+			.price{
+				font-size: 36px;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			.val{
+				font-size: 18px;
+				line-height: 20px;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			.name{
+				font-size: 30px;
+				font-weight: bold;
+			}
+			.about{
+				margin: 10px auto 0px auto;
+				width: 250px;
+				font-size: 14px;
+				line-height: 18px;
+				text-align: left;
+			}
+		}
+	}
+
+	//Текстовый блок
+	.textblock{
+		font-size: 16px;
+		line-height: 19px;
+		color: #383838;
+		margin-bottom: 50px;
+		&.services-textblock{
+			width: 760px;
+		}
+		h2,h3{
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+	}
+
+
+	.main-column{
+		width: 761px;
+
+		//Верхняя табличка
+		.header-table{
+			display: table;
+			width: 100%;
+			background-color: #444440;
+			margin-top: 3px;
+			margin-bottom: 42px;
+			>div{
+				display: table-cell;
+				vertical-align: middle;
+				width: 33.33%;
+				font-size: 14px;
+				line-height: 15px;
+				font-style: italic;
+				color: #fff;
+				padding: 12px 20px;
+			}
+		}
+
+		.narrow-block{
+			width: 100%;
+			padding-right: 35px;
+		}
+
+
+		//Заголовок - этапы работы
+		.workstages-header{
+			font-family: Georgia, serif;
+			font-size: 24px;
+			font-style: italic;
+			color: #343434;
+			margin-bottom: 25px;
+		}
+
+		//Верхняя табличка
+		.workstages-table{
+			width: 100%;
+			margin-bottom: 20px;
+			td{
+				vertical-align: top;
+				font-size: 16px;
+				line-height: 19px;
+				color: #383838;
+				padding-bottom: 40px;
+			}
+			td.stage-num{
+				width: 75px;
+				span{
+					display: inline-block;
+					color: #fff;
+					font-size: 33px;
+					font-weight: bold;
+					line-height: 52px;
+					width: 52px;
+					border-radius: 50%;
+					text-align: center;
+					background-color: #4fadcc;
+				}
+				
+			}
+			td.about-stage{
+				width: 470px;
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+			td.days{
+				width: 180px;
+				text-align: center;
+				font-size: 30px;
+				font-weight: bold;
+			}
+		}
+
+		//Таблица цен
+		.prices-table{
+			width: 100%;
+		}
+
+		//Список дел
+		.more-cases-link{
+			display: inline-block;
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-top: 40px;
+		}
+	}
+
+	//Боковая колонка
+	.aside-column{
+		width: 349px;
+		padding-left: 104px;
+
+		.aside-link-wrapper{
+			margin-bottom: 32px;
+			font-size: 18px;
+		}
+
+		.closed-link,
+		.open-link{
+			display: inline-block;
+			line-height: 22px;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		.closed-link{
+			color: #4fadcc;
+			border-bottom: 1px dashed #4fadcc;
+			&:hover{
+				border-color: transparent;
+			}
+		}
+
+		.open-link{
+			color: #1c1c1c;
+		}
+
+		//Список
+		.link-list{
+			margin-top: 20px;
+			font-family: Georgia, serif;
+			li{
+				display: block;
+				margin-bottom: 18px;
+				&.active a{
+					color: #808080;
+				}
+			}
+			a{
+				color: #4fadcc;
+				&:hover{
+					color: #808080;
+				}
+			}
+		}
+
+		
+	}
+
+}
+
+//За подробной информацией
+.more-info{
+	width: 100%;
+	background-color: #f0f0f0;
+	padding: 20px 16px;
+	p{
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: bold;
+		color: #2b2b2b;
+		margin-bottom: 12px;
+	}
+	.recall{
+		font-size: 14px;
+	}
+	&.mobile-more-info{
+		display: none;
+	}
+}
+
+//Таблица с ценами
+.prices-table{
+	display: table;
+	width: 760px;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+
+.prices-table-row,
+.prices-table-header{
+	display: table-row;
+}
+
+.prices-table .prices-table-row:nth-child(2n+1) .prices-table-td{
+	background-color: #f0f0f0;
+}
+
+//Заголовок таблицы
+.prices-table-header .prices-table-td,
+.prices-table-header .prices-table-td.service{
+	background-color: #d0d0d0;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 10px;
+	padding: 8px 23px 9px 23px;
+}
+
+//Ячейка таблицы
+.prices-table-td{
+	display: table-cell;
+	padding: 15px 23px 20px 23px;
+	border-right: 1px solid #dcdcdc;
+	background-color: #FFF;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000;
+	&:first-child{
+		border-left: 1px solid #dcdcdc;
+	}
+	a{
+		text-decoration: none;
+	}
+	&.service{
+		width: 367px;
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: bold;
+		color: #4f4f4f;
+	}
+	&.price{
+		width: 185px;
+	}
+	&.time{
+		width: 172px;
+	}
+}
+
+//Адаптивная часть
+
+
+@media only screen and (max-width: 1150px) {
+	.detail-page{
+
+		.main-column{
+			width: 69%;
+
+			.narrow-block{
+				padding-right: 0px;	
+			}
+		}
+
+		.aside-column{
+			width: 31%;
+			padding-left: 20px;
+		}
+
+	}
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1150px) {
+
+	//Пакеты услуг
+	.service-complect-wrapper{
+		width: 280px !important;
+		height: 293px !important;
+		.service-complect {
+			>div{
+				padding-bottom: 70px !important;
+			}
+			.about{
+				width: 200px !important;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+
+	.responsive-table{
+		display: none;
+	}
+
+	.pdf-link-wrapper{
+		display: none !important;
+	}
+
+	.detail-page{
+		padding-bottom: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		&.service-page{
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 100px;
+		}
+
+		.textblock.services-textblock{
+			width: 100%;
+		}
+
+		.service-complect-wrapper{
+			width: 100%;
+			max-width: 320px;
+			display: block;
+			margin: 0px auto;
+		}
+
+
+		.files-block{
+			text-align: center;
+		}
+		.mobile-link-list{
+			display: block;
+			text-align: center;
+			font-family: Georgia, serif;
+			font-size: 18px;
+			line-height: 20px;
+			margin-bottom: 10px;
+			li{
+				display: inline-block;
+				vertical-align: top;
+				margin: 5px;
+				&.active a{
+					color: #808080;
+				}
+			}
+			a{
+				display: inline-block;
+				padding: 5px;
+				color: #4fadcc;
+				&:hover{
+					color: #808080;
+				}
+			}
+		}
+		.aside-column{
+			display: block !important;
+			width: 100%;
+			padding-left: 0px;
+			.aside-link-wrapper{
+				display: none !important;
+			}
+			.more-info{
+				display: block;
+				margin-top: 30px;
+				text-align: center;
+			}
+		}
+		.main-column{
+			display: block !important;
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+
+			.header-table{
+				display: block;
+				padding: 8px 0px;
+				>div{
+					width: 100%;
+					display: block;
+					text-align: center;
+					padding: 8px 20px;
+				}
+			}
+
+			.workstages-table{
+				width: 100%;
+				margin-bottom: 20px;
+				td{
+					vertical-align: top;
+					font-size: 16px;
+					line-height: 19px;
+					color: #383838;
+					padding-bottom: 40px;
+				}
+				td.stage-num{
+					display: none;
+					width: 0%;
+					span{
+						display: none;
+					}
+					
+				}
+				td.about-stage{
+					width: 70%
+				}
+				td.days{
+					width: 30%;
+				}
+			}
+		}
+	}
+
+	/*.mobile-more-info{
+		display: block !important;
+		margin-top: 30px;
+		text-align: center;
+	}*/
+}

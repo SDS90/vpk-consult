@@ -1,0 +1,111 @@
+//Стили для подвала
+
+.footer-wrapper{
+	width: 100%;
+	min-width: $pageWidth;
+ 	background-color: #1a1a1a;
+}
+
+
+footer{
+	width: $pageWidth;
+	margin: 0px auto;
+	padding: 10px $pagePadding 10px $pagePadding;
+	font-size: 0px;
+	letter-spacing: -1px;
+	color: #b1b1b1;
+	white-space: nowrap;
+	a{
+		color: #b1b1b1;
+		text-decoration: none;
+		&:hover{
+			color: #e9e9e9;
+		}
+	}
+	.left-block,
+	.right-block{
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.left-block{
+		float: left;
+	}
+	.right-block{
+		float: right;
+		text-align: right;
+		font-size: 14px;
+		line-height: 14px;
+		letter-spacing: normal;
+	}
+
+	.button, .nav{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.button{	
+		font-size: 12px;
+		line-height: 14px;
+		text-transform: uppercase;
+		margin-right: 30px;
+		margin-top: 1px;
+		letter-spacing: normal;
+	}
+
+	.nav{
+		display: inline-block;
+		vertical-align: top;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 15px;
+			font-size: 14px;
+			line-height: 14px;
+			letter-spacing: normal;
+			&:first-child{
+				margin-left: 0px;
+			}
+		}
+	}
+	.jur-button:hover{
+		color: #4fadcc;
+		font-weight: bold;
+	}
+	.fiz-button:hover{
+		color: #4fccbf;
+		font-weight: bold;
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	.footer-wrapper{
+		width: 100%;
+    	min-width: 0px;
+	}
+	footer{
+		width: 100%;
+    	min-width: 0px;
+    	.button{
+    		margin-right: 15px;
+    	}
+    	.nav li{
+    		margin-left: 10px;
+    	}
+	}
+
+}
+
+@media only screen and (max-width: 1000px) {
+	footer{
+		.left-block{
+			display: none;
+		}
+		.right-block{
+			display: block;
+			margin: 0px auto;
+			float: none;
+			text-align: center;
+		}
+	}
+}

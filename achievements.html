@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  	<meta name="viewport" content="width=device-width">
+
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<link rel="stylesheet" href="css/style_ie8.css">
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/plugins/jquery.inputmask.js"></script>
+
+	<script src="js/script.js"></script>
+
+	
+	<title>ВПК-Консалтинг - Достижения</title>
+</head>
+<body>
+
+
+	<!-- Полная страница -->
+	<div class="fullpage" id="fullPage">
+
+		<!-- Открываем форму заказа звонка  -->
+		<div class="open-recall-form" id="openRecallForm">
+			<!-- Сама форма -->
+			<form action="#" class="recall-form" id="recallForm">
+				<!-- Кнопка закрытия -->
+				<div class="closed" id="closedForm"></div>
+				<!-- поля -->
+				<input type="text" class="textfield" placeholder="ИМЯ">
+				<input type="text" class="textfield phonefield" placeholder="ТЕЛЕФОН">
+
+				<!-- кнопка отправки -->
+				<input type="submit" class="submit-btn" value="Заказать звонок">
+			</form>
+		</div>
+
+		<!-- Шапка сайта -->
+		<div class="header-wrapper">
+
+			<header class="clear" id="headerBlock">
+				
+					<!-- Логотип -->
+					<div class="logo-wrapper">
+
+						<a href="#" class="logo"><!-- картинка задаётся через background --></a>
+						<a href="#" class="open-menu-button" id="openHeaderMenu"></a>
+
+						<div class="clearfix"></div>
+
+						<!-- навигация (мобильный вариант) -->
+						<div class="mobile-nav" id="headerMenuBlock">
+							<div class="closed" id="closedMenuBlock"></div>
+							<ul class='nav'>
+								<!--<li><a href='#'>Наши результаты</a> </li>
+								<li><a href='#'>Команда профессионалов</a> </li>
+								<li><a href='#'>Партнёры</a> </li>
+								<li><a href='#'>Услуги и цены</a> </li>
+								<li><a href='#'>Контакты</a> </li>-->
+							</ul>
+						</div>
+					</div>
+
+					<div class="header-nav-block">
+						<div class="horizontal-line clear">
+
+							<!-- Контакты -->
+							<div class="contacts-wrapper">
+								<span class="contact-data" >8(831) 123-45-67</span>       
+								<a class="contact-data" href="#">info@vpknnov.ru</a>
+								
+							</div>
+						
+
+							<!-- Кнопки -->
+							<div class="buttons-block">
+								<a href="#" class="button jur-button">Для юридических лиц</a>
+								<a href="#" class="button fiz-button">Для физических лиц</a>
+							</div>
+
+						</div>
+
+						<!-- навигация (стандартный) -->
+						<ul class='nav standart-nav'>
+							<li class="active"><a href='#'>Наши результаты</a> </li>
+							<li><a href='#'>Команда профессионалов</a> </li>
+							<li><a href='#'>Партнёры</a> </li>
+							<li><a href='#'>Услуги и цены</a> </li>
+							<li><a href='#'>Контакты</a> </li>
+						</ul>
+					</div>
+				</header>
+
+		</div>
+
+		<!-- Внутренняя страница -->
+		<section class="inner-page-wrapper">
+			
+			<div class="inner-page achievements-page">
+				
+				<!-- Заголовок -->
+				<h1 class="page-header">Наши достижения</h1>
+
+				<!-- графики -->
+				<div class="achievements-graphic-table">
+
+					<!-- одна колонка -->
+					<div>
+						<div class="graphic-header">динамика выигранных дел <br> по количеству</div>
+
+						<!-- сам график -->
+						<img src="img/achievements/graphic1.png" alt="">
+					</div>
+					<!-- одна колонка -->
+					<div>
+						<div class="graphic-header">динамика выигранных дел <br> по полученному финансовому результату</div>
+
+						<!-- сам график -->
+						<img src="img/achievements/graphic2.png" alt="">
+					</div>
+					<!-- одна колонка -->
+					<div>
+						<div class="graphic-header">соотношение выигранных дел / <br> дел без достигнутого целевого результата</div>
+
+						<!-- сам график -->
+						<img src="img/achievements/graphic3.png" alt="">
+					</div>
+				</div>
+
+				<div class="price-block"><span class="price">318624219,48 <span>руб.</span></span> <span class="about-price">Сумма по всем выигранным делам <br>/ реализованным проектам</span></div>
+
+				<!-- Таблица достижений всю страницу -->
+				<div class="achievements-table responsive-table">
+					
+					<!-- Строка таблицы - заголовки -->
+					<div class="achievements-table-header responsive-table-header">
+						<div class="achievements-table-td responsive-table-td theme">Тема</div>
+						<div class="achievements-table-td responsive-table-td subject">Субъект презентации</div>
+						<div class="achievements-table-td responsive-table-td answer">Ответ</div>
+						<div class="achievements-table-td responsive-table-td lawyer">Юрист</div>
+						<div class="achievements-table-td responsive-table-td link">Ссылка на дело</div>
+					</div>
+
+					<!-- Строка таблицы - стандартные строки -->
+					<div class="achievements-table-row responsive-table-row">
+						<!-- Тема -->
+						<div class="achievements-table-td responsive-table-td theme">
+
+							<!-- Специальный блок для отзывов - сюда они будут помещать -->
+							<div class="info-block">
+								
+								<!-- Текст отзыва -->
+								<div class="review-block">
+									<div class="review-header">Отзыв клиента:</div>
+
+									<div class="company-name">Холдинг-центр азимут</div>
+
+									<div class="textblock">
+										<p>Позвольте выразить Вам искреннюю благодарность за плодотворное сотрудничество. Благодаря Вашим усилиям, наша компания приобрела новых клиентов и расширила спектр своей деятельности.</p>
+										<p>С уважением,<br>
+											Джон Милтон</p>
+									</div>
+								</div>
+							</div>
+
+							Незаконное использование картинки "Мозг"
+							
+						</div>
+						<div class="achievements-table-td responsive-table-td subject">
+							bf-media.ru
+						</div>
+						<div class="achievements-table-td responsive-table-td answer">
+							Картинка убрана
+						</div>
+						<div class="achievements-table-td responsive-table-td lawyer">
+							Адриана Добровинская
+						</div>
+						<div class="achievements-table-td responsive-table-td link">
+							<a href="#">kad.arbitr.ru</a>
+						</div>
+					</div>
+
+					<!-- Строка таблицы - стандартные строки -->
+					<div class="achievements-table-row responsive-table-row">
+						<div class="achievements-table-td responsive-table-td theme">
+							<!-- Специальный блок для отзывов - сюда они будут помещать -->
+							<div class="info-block">
+								
+								<!-- Текст отзыва -->
+								<div class="review-block">
+									<div class="review-header">Отзыв клиента:</div>
+
+									<div class="company-name">Холдинг-центр азимут</div>
+
+									<div class="textblock">
+										<p>Позвольте выразить Вам искреннюю благодарность за плодотворное сотрудничество. Благодаря Вашим усилиям, наша компания приобрела новых клиентов и расширила спектр своей деятельности.</p>
+										<p>С уважением,<br>
+											Джон Милтон</p>
+									</div>
+								</div>
+							</div>
+
+							Использование ненормативной лексики
+						</div>
+						<div class="achievements-table-td responsive-table-td subject">
+							Рассмотрение дела в УВД Тверского района по заявлению участников акции «Волгоградский прорыв»
+						</div>
+						<div class="achievements-table-td responsive-table-td answer">
+							В возбуждении уголовного и административного дела отказано
+						</div>
+						<div class="achievements-table-td responsive-table-td lawyer">
+							Савва Резник
+						</div>
+						<div class="achievements-table-td responsive-table-td link">
+							<a href="#">www.sudrf.ru</a>
+						</div>
+					</div>
+
+					<!-- Строка таблицы - стандартные строки -->
+					<div class="achievements-table-row responsive-table-row">
+						<!-- Тема -->
+						<div class="achievements-table-td responsive-table-td theme">
+							<!-- Специальный блок для отзывов - сюда они будут помещать -->
+							<div class="info-block">
+								
+								<!-- Текст отзыва -->
+								<div class="review-block">
+									<div class="review-header">Отзыв клиента:</div>
+
+									<div class="company-name">Холдинг-центр азимут</div>
+
+									<div class="textblock">
+										<p>Позвольте выразить Вам искреннюю благодарность за плодотворное сотрудничество. Благодаря Вашим усилиям, наша компания приобрела новых клиентов и расширила спектр своей деятельности.</p>
+										<p>С уважением,<br>
+											Джон Милтон</p>
+									</div>
+								</div>
+							</div>
+
+							Незаконное использование картинки "Мозг"
+						</div>
+						<div class="achievements-table-td responsive-table-td subject">
+							bf-media.ru
+						</div>
+						<div class="achievements-table-td responsive-table-td answer">
+							Картинка убрана
+						</div>
+						<div class="achievements-table-td responsive-table-td lawyer">
+							Адриана Добровинская
+						</div>
+						<div class="achievements-table-td responsive-table-td link">
+							<a href="#">kad.arbitr.ru</a>
+						</div>
+					</div>
+
+					<!-- Строка таблицы - стандартные строки -->
+					<div class="achievements-table-row responsive-table-row">
+						<div class="achievements-table-td responsive-table-td theme">
+							<!-- Специальный блок для отзывов - сюда они будут помещать -->
+							<div class="info-block">
+								
+								<!-- Текст отзыва -->
+								<div class="review-block">
+									<div class="review-header">Отзыв клиента:</div>
+
+									<div class="company-name">Холдинг-центр азимут</div>
+
+									<div class="textblock">
+										<p>Позвольте выразить Вам искреннюю благодарность за плодотворное сотрудничество. Благодаря Вашим усилиям, наша компания приобрела новых клиентов и расширила спектр своей деятельности.</p>
+										<p>С уважением,<br>
+											Джон Милтон</p>
+									</div>
+								</div>
+							</div>
+
+							Использование ненормативной лексики
+						</div>
+						<div class="achievements-table-td responsive-table-td subject">
+							Рассмотрение дела в УВД Тверского района по заявлению участников акции «Волгоградский прорыв»
+						</div>
+						<div class="achievements-table-td responsive-table-td answer">
+							В возбуждении уголовного и административного дела отказано
+						</div>
+						<div class="achievements-table-td responsive-table-td lawyer">
+							Савва Резник
+						</div>
+						<div class="achievements-table-td responsive-table-td link">
+							<a href="#">www.sudrf.ru</a>
+						</div>
+					</div>
+
+				</div>
+
+				
+
+			</div>
+		</section>
+
+
+
+	</div>
+
+	<!-- Подвальчик -->
+	<section class="footer-wrapper" id="footerBlock">
+		<footer class="clear">
+			<!-- Левый блок -->
+			<div class="left-block">
+				<a href="#" class="button jur-button">Для юридических лиц</a>
+				<a href="#" class="button fiz-button">Для физических лиц</a>
+
+				<!-- навигация -->
+				<ul class='nav'>
+					<li><a href='#'>Наши результаты</a> </li>
+					<li><a href='#'>Команда профессионалов</a> </li>
+					<li><a href='#'>Партнёры</a> </li>
+					<li><a href='#'>Услуги и цены</a> </li>
+					<li><a href='#'>Контакты</a> </li>
+				</ul>
+			</div>
+
+			<!-- Копирайт -->
+			<div class="right-block">ВПК-Консалтинг, 2015</div>
+		</footer>
+	</section>
+
+
+
+
+	
+</body>
+</html>

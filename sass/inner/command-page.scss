@@ -1,0 +1,193 @@
+//Команда
+
+.command-page{
+	padding-bottom: 0px;
+
+	.main-column{
+		width: 770px;
+	}
+
+	.command-wrapper{
+		padding-top: 12px;
+		font-size: 0px;
+		letter-spacing: -1px;
+	}
+
+	//Сотрудник
+	.employer-block{
+		display: inline-block;
+		vertical-align: top;
+		float: left;
+		letter-spacing: normal;
+		width: 325px;
+		margin-right: 60px;
+		margin-bottom: 48px;
+		color: $textColor;
+
+		.photo{
+			display: block;
+			width: 100%;
+			border: 3px solid #fff;
+			box-shadow: 0px 2px 2px #999;
+			margin-bottom: 23px;
+		}
+		.employer-name{
+			font-size: 24px;
+			margin-bottom: 19px;
+		}
+
+		.textblock{
+			font-size: 14px;
+			line-height: 17px;
+			p{
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	//Боковая колонка
+	.aside-column{
+		width: 340px;
+		padding: 25px 0px 150px 30px;
+		border-left: 1px solid #e1e3e2;
+		font-size: 13px;
+		line-height: 18px;
+
+		.about-us-block{
+			width: 270px;
+			margin-bottom: 40px;
+		}
+
+		.textblock p{
+			margin-bottom: 18px;
+		}
+
+		.aside-header{
+			font-size: 21px;
+			font-weight: bold;
+			color: $textColor;
+			margin-bottom: 18px;
+		}
+	}
+}
+
+//Адаптивная часть
+
+@media only screen and (max-width: 1150px) {
+	.command-page{
+
+		.main-column{
+			width: 69%;
+		}
+
+		.aside-column{
+			width: 31%;
+			padding-left: 20px;
+		}
+
+		.employer-block{
+			width: 46%;
+			margin-right: 4%;
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.command-page{
+
+		.main-column{
+			width: 100%;
+		}
+
+		.aside-column{
+			display: none !important;
+		}
+
+		.command-wrapper{
+			text-align: center;
+		}
+
+		.employer-block{
+			float: none;
+			text-align: left;
+			width: 40%;
+			margin-left: 4%;
+			margin-right: 4%;
+		}
+	}
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+	.command-page{
+		.employer-block{
+			width: 40%;
+			margin-left: 4%;
+			margin-right: 4%;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.command-page{
+
+		.employer-block{
+			display: block;
+			width: 100%;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-bottom: 20px;
+			.photo,
+			.about-employer{
+				display: inline-block;
+				vertical-align: top;
+			}
+			.photo{
+				float: left;
+				width: 25%;
+				margin-right: 4%;
+				margin-left: 0px;
+			}
+			.about-employer{
+				float: right;
+				width: 70%;
+			}
+		}
+
+	}
+}
+
+@media only screen and (min-width: 501px)  and (max-width: 700px) {
+	.command-page{
+
+		.employer-block{
+			.photo{
+				float: left;
+				width: 25%;
+				margin-right: 4%;
+				margin-left: 0px;
+			}
+			.about-employer{
+				float: right;
+				width: 70%;
+			}
+		}
+
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.command-page{
+
+		.employer-block{
+			.photo{
+				display: none;
+			}
+			.about-employer{
+				width: 100%;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+
+	}
+}

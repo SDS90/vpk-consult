@@ -1,0 +1,143 @@
+//Внутренние страницы
+
+.inner-page-wrapper{
+	width: 100%;
+	min-width: $pageWidth;
+ 	background-color: transparent;
+}
+
+
+.inner-page{
+	width: $pageWidth;
+	margin: 0px auto;
+	padding: 155px $pagePadding 0px $pagePadding;
+
+	.page-header{
+		font-family: 'BebasNeue', sans-serif;
+		font-size: 48px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		line-height: 55px;
+		color: #6b6b6b;
+
+		margin-bottom: 14px;
+		&.serif{
+			font-family: Georgia, serif;
+			font-size: 37px;
+			color: #1d1d1d;
+			font-weight: normal;
+		}
+	}
+
+	//Две колонки
+	.twocol{
+		display: table;
+		width: 100%;
+
+		.main-column{
+			display: table-cell;
+			vertical-align: top;
+		}
+
+		.aside-column{
+			display: table-cell;
+			vertical-align: top;
+		}
+	}
+
+	.mobile-variant-table{
+		display: none;
+	}
+}
+
+//Адаптивная часть
+
+
+@media only screen and (max-width: 1150px) {
+	.inner-page-wrapper{
+		width: 100%;
+    	min-width: 0px;
+	}
+	.inner-page{
+		width: 100%;
+    	min-width: 0px;
+	}
+}
+
+@media only screen and (max-width: 1000px){
+	.inner-page{
+		padding-top: 185px !important;
+	}
+	.page-header{
+		text-align: center;
+		font-size: 40px;
+		line-height: 45px;
+	}
+	.twocol{
+		.aside-column{
+			display: none;
+		}
+	}
+
+	//Мобильный вариант таблицы
+	.mobile-variant-table{
+		display: block !important;
+		width: 100%;
+		.mobile-table-block{
+			width: 100%;
+			margin-bottom: 3px;		
+		}
+		.mobile-table-header{
+			width: 100%;
+			background-color: #d0d0d0;
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: bold;
+			color: #4f4f4f;
+			padding: 8px 50px 9px 20px;
+			cursor: pointer;
+			background-image: url(../img/icons/arrow-open.png);
+			background-position: right center;
+			background-repeat: no-repeat;
+			&.opened{
+				background-image: url(../img/icons/arrow-close.png);
+			}
+		}
+		.mobile-table{
+			display: table;
+			width: 100%;
+		}
+		.mobile-table-row{
+			display: table-row;
+		}
+		.mobile-table-td{
+			display: table-cell;
+			vertical-align: middle;
+			width: 50%;
+			padding: 8px 23px 9px 23px;
+			border-bottom: 1px solid #dcdcdc;
+			border-right: 1px solid #dcdcdc;
+			&:first-child{
+				border-left: 1px solid #dcdcdc;
+			}
+		}
+		.mobile-table-subject{
+			font-weight: bold;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.inner-page{
+		padding-top: 215px !important;
+	}
+	.page-header{
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (max-width: 390px) {
+	.inner-page{
+		padding-top: 265px !important;
+	}
+}

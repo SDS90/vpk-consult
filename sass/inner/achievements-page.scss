@@ -1,0 +1,221 @@
+//Достижения
+
+.achievements-page{
+	padding-bottom: 100px;
+
+	.price-block{
+		margin-bottom: 50px;
+		color: #282828;
+		
+
+		.price{
+			display: inline-block;
+			vertical-align: top;
+			font-size: 36px;
+			font-weight: bold;
+
+			span{
+				font-size: 18px;
+			}
+		}
+
+		.about-price{
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 5px;
+			margin-left: 3px;
+			font-size: 14px;
+		}
+	}
+}
+
+//Таблица достижений
+.achievements-table{
+	display: table;
+	width: 100%;
+}
+
+.achievements-table-row,
+.achievements-table-header{
+	display: table-row;
+}
+
+.achievements-table .achievements-table-row:nth-child(2n+1) .achievements-table-td{
+	background-color: #f0f0f0;
+	.info-block{
+		background-color: #79d5cc;
+	}
+}
+
+//Заголовок таблицы
+.achievements-table-header .achievements-table-td,
+.achievements-table-header .achievements-table-td.theme{
+	background-color: #d0d0d0;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 10px;
+	padding: 8px 23px 9px 23px;
+}
+
+//Ячейка таблицы
+.achievements-table-td{
+	display: table-cell;
+	padding: 10px 23px 14px 23px;
+	border-left: 1px solid #dcdcdc;
+	background-color: #FFF;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000;
+	&:first-child{
+		border-left: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	&.theme{
+		width: 306px;
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: bold;
+		color: #4f4f4f;
+		position: relative;
+
+		//Блок отзыва
+		.info-block{
+			position: absolute;
+			top: 0px; right: 0px;
+			width: 17px;
+			height: 17px;
+			cursor: pointer;
+			background-color: #7dc2d9;
+			background-image: url(../img/icons/i.png);
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		.review-block{
+			display: none;
+			position: absolute;
+			top: -20px;
+			left: -80px;
+			width: 368px;
+			background-color: #FFF;
+			padding: 15px;
+			border: 1px solid #dcdcdc;
+			box-shadow: 5px 5px 5px #999;
+			z-index: 15;
+			color: $textColor;
+			cursor: default;
+		}
+		.review-header,
+		.company-name,
+		.textblock{
+			cursor: text;
+		}
+		.review-header{
+			font-size: 10px;
+			color: #4fadcc;
+			margin-bottom: 5px;
+			text-transform: uppercase;
+		}
+		.company-name{
+			font-size: 14px;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+		.textblock{
+			font-weight: normal;
+			p{margin-bottom: 5px;}
+		}
+	}
+	&.subject{
+		width: 303px;
+	}
+	&.answer{
+		width: 245px;
+	}
+	&.lawyer{
+		width: 127px;
+	}
+	&.link{
+		width: 129px;
+	}
+}
+
+//Графики
+.achievements-graphic-table{
+	display: table;
+	width: 100%;
+	margin-bottom: 35px;
+
+	>div{
+		display: table-cell;
+		vertical-align: middle;
+		width: 33.33%;
+
+		img{
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	.graphic-header{
+		font-size: 14px;
+		line-height: 22px;
+		font-weight: bold;
+		color: #282828;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+}
+
+//Адаптивная часть
+
+@media only screen and (max-width: 1150px) {
+	.achievements-table-td{
+		&.theme{
+			width: 27%;
+		}
+		&.subject{
+			width: 28%;
+		}
+		&.answer{
+			width: 22%;
+		}
+		&.lawyer{
+			width: 11.5%;
+		}
+		&.link{
+			width: 11.5%;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 1000px) {
+	.achievements-table{
+		display: none;
+	}
+
+	.achievements-graphic-table{
+		display: block;
+
+		.graphic-header{
+			margin-bottom: 14px;
+			text-align: center;
+		}
+
+		>div{
+			display: block;
+			width: auto;
+			margin-bottom: 25px;
+
+			img{
+				margin: 0px auto;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,112 @@
+//Страница контактов
+
+.contacts-page-wrapper{
+	width: 100%;
+	min-width: $pageWidth;
+ 	background-color: transparent;
+ 	position: relative;
+}
+
+.contacts-page-header{
+	position: static;
+	padding-bottom: 15px;
+}
+
+
+.contacts-page{
+	position: absolute;
+	width: $pageWidth;
+	top: 48px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	background-color: transparent;
+	z-index: 9;
+
+	.address-block{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 438px;
+		background-color: transparent;
+	}
+
+	.page-header{
+		font-family: 'BebasNeue', sans-serif;
+		font-size: 48px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		line-height: 55px;
+		color: $textColor;
+		pointer-events: none;
+		margin-bottom: 10px;
+	}
+
+	.contact-container{
+		padding: 38px 30px 33px 30px;
+		background-color: #FFF;
+		box-shadow: 0px 2px 2px #999;
+		border: 1px solid #ececec;
+		font-size: 14px;
+		color: $textColor;
+		p{
+			margin-bottom: 20px;
+		}
+		.social-link{
+			display: inline-block;
+			vertical-align: top;
+			width: 24px; height: 25px;
+			background-repeat: no-repeat;
+			&.vk{
+				background-image: url(../img/icons/vk.png);
+				background-position: center center;
+			}
+		}
+	}
+
+	.contact-container-header{
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+	}
+}
+
+//Адаптивная часть
+
+
+@media only screen and (max-width: 1150px) {
+	.contacts-page-wrapper{
+		width: 100%;
+		min-width: 0px;
+	}
+	.contacts-page{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.contacts-page-wrapper{
+		width: 100%;
+		min-width: 0px;
+	}
+	.contacts-page{
+		top: 0px;
+		.page-header{
+			display: none;
+		}
+		.address-block{
+			width: 100%;
+		}
+		.contact-container{
+			border: none;
+			padding: 10px 30px;
+			font-size: 16px;
+			p{
+				margin-bottom: 10px;
+			}
+		}
+		.contact-container-header{
+			margin-bottom: 20px;
+		}
+	}
+}
